@@ -10,11 +10,10 @@ There is a set of scripts inside project folders. They help you to bring replica
 ### 01 - Replica Set configuration
 Start a 3-node replica set and activate replication
 
-### 02 - Replica Set with one arbiter
+### TODO - 02 - Replica Set with one arbiter
 Start a 2-node and one-arbiter replica set and activate replication
 
-### 03 - Replica Set with security enabled
+### TODO - 03 - Replica Set with security enabled
 Start a 3-node replica set with security enabled and activate replication
 
-### 04 - Replica Set with tags
-TODO
+### TODO - 04 - Replica Set with tags
