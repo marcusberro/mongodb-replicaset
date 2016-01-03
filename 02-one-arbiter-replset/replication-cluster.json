@@ -1,0 +1,20 @@
+{
+   _id: "rs",
+   members: [
+      {
+         _id: 0,
+         host: "localhost:27020",
+         priority: 2
+      },
+      {
+         _id: 1,
+         host: "localhost:27021",
+         priority: 1
+      },
+      {
+         _id: 2,
+         host: "localhost:27022",
+         arbiterOnly: true
+      }
+   ]
+}
