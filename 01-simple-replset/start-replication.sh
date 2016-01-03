@@ -1,11 +1,13 @@
 #!/bin/bash
 
+scriptPath="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # 6 tries
 TIMEOUT=6
 COUNT=0
 
 # Checking if mongo is up
-while ! mongo --eval "var rs_cluster=$(cat replication-cluster.json);" start-replication.js; do 
+while ! mongo --eval "var rs_cluster=$(cat ${scriptPath}/replication-cluster.json);" $scriptPath/start-replication.js; do 
   ((COUNT++));
   sleep 1; 
   echo " ";
