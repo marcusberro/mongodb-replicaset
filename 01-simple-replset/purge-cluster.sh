@@ -1,5 +1,7 @@
 #!/bin/bash
 
+scriptPath="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # Stop replica set
 
 PIDS_MONGO=`ps aux | grep mongodb.conf | grep config | awk '{print $2}'`
@@ -17,6 +19,6 @@ fi
 echo " "
 echo " ### Purge replica set dbs"
 
-rm -rf rs1/db
-rm -rf rs2/db
-rm -rf rs3/db
+rm -rf ${scriptPath}/rs1/db
+rm -rf ${scriptPath}/rs2/db
+rm -rf ${scriptPath}/rs3/db
