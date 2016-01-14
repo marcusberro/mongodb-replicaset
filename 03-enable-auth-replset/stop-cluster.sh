@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 PIDS_MONGO=`ps aux | grep mongodb.conf | grep config | awk '{print $2}'`
 
