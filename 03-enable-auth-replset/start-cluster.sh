@@ -5,9 +5,13 @@ scriptPath="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo " "
 echo " ### Starting replica set cluster..."
 
-mkdir ${scriptPath}/rs1/db
-mkdir ${scriptPath}/rs2/db
-mkdir ${scriptPath}/rs3/db
+mkdir "${scriptPath}"/rs1/db
+mkdir "${scriptPath}"/rs2/db
+mkdir "${scriptPath}"/rs3/db
+
+chmod 600 "${scriptPath}"/rs1/mongodb-keyfile
+chmod 600 "${scriptPath}"/rs2/mongodb-keyfile
+chmod 600 "${scriptPath}"/rs3/mongodb-keyfile
 
 echo " "
 echo " ### Starting replica set: rs1"
