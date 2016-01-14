@@ -13,6 +13,8 @@ if(replStatus && replStatus.ok === 1){
 	printjson(rs.status());
 }
 
+sleep(5000);
+
 if(replStatus && replStatus.ok === 1){
 	
 	db = db.getSiblingDB("admin");
@@ -20,7 +22,7 @@ if(replStatus && replStatus.ok === 1){
 	if(!db.auth("dbAdmin","dbAdmin")){
 		print(" ### Creating DB Admin user...");
 
-		var adminUser = db.createUser({ user: "dbAdmin", pwd: "dbAdmin", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] });
+		var adminUser = db.createUser({ user: "dbAdmin", pwd: "dbAdmin", roles: [ { role: "userAdminAnyDatabase", db: "admin" }, {role:"root", db: "admin"} ] });
 
 		var dbAdimOk = db.auth("admin","latam");
 
